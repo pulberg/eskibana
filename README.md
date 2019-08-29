@@ -3,9 +3,9 @@ Docker container running both Elasticsearch and Kibana, useful for dev or local 
 
 Use - (change/update ports for ES/Kibana if you have FW restrictions) 
 
-docker run -d -p <esport>:<esport> -p <kibanaport>:<kibanaport> <pathtocontainerregistry>/<containername>:<containertag>
+docker run -d -p `<esport>:<esport>` -p `<kibanaport>:<kibanaport>` `<pathtocontainerregistry>/<containername>:<containertag>`
 
 Here is how I have mine configured - 
 
-docker run -d -p 8080:9200 -p 80:5601 someurl.here.com/eskibana/eskibana:dev-v0.2.1
+```docker run -d -p 8080:9200 -p 80:5601 someurl.here.com/eskibana/eskibana:dev-v0.2.1```
 
