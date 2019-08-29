@@ -3,7 +3,7 @@ Docker container running both Elasticsearch and Kibana, useful for dev or local 
 
 ---
 
-Use - (change/update ports for ES/Kibana if you have FW restrictions) 
+Use - (change/update ports for ES/Kibana if you have firewall rule restrictions) 
 
 docker run -d -p `<esport>:<esport>` -p `<kibanaport>:<kibanaport>` `<pathtocontainerregistry>/<containername>:<containertag>`
 
