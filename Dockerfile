@@ -1,6 +1,6 @@
 FROM node:10.15.2-jessie-slim
 
-LABEL maintainer "pulberg <phillip.ulberg@raymondjames.com>"
+LABEL maintainer "Phillip Ulberg <phillip.ulberg@raymondjames.com>"
 
 ARG ek_version=7.3.1
 
