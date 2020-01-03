@@ -11,7 +11,7 @@ Here is how I have mine configured -
 
 ```docker run -d -p 8080:9200 -p 80:5601 someurl.here.com/eskibana/eskibana:dev-v0.2.1```
 
-*Note - in the Dockerfile I am specifiying how much memory to dedicate to ES, please adjust this according to your env/needs.
+*Note - in the Dockerfile I am specifiying how much memory to dedicate to ES, adjust this according to your env/needs.
 
 ```
 RUN sed -i -e 's/-Xms1g/-Xms4g/g' /home/elasticsearch/elasticsearch/config/jvm.options \
