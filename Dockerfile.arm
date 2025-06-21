@@ -1,4 +1,7 @@
-FROM node:20.15.1
+FROM arm64v8/node:20.15.1
+#FROM node:14.17.6
+#https://artifacts.elastic.co/downloads/kibana/kibana-8.10.2-linux-aarch64.tar.gz
+#https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.10.2-linux-aarch64.tar.gz
 
 LABEL maintainer "Phillip Ulberg <phillip.ulberg@gmail.com>"
 
@@ -14,13 +17,13 @@ ENV ES_TMPDIR=/home/elasticsearch/elasticsearch.tmp \
     ES_DATADIR=/home/elasticsearch/elasticsearch/data \
     ES_JAVA_HOME=/home/elasticsearch/elasticsearch/jdk
 
-RUN wget -q -O - https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${eskibana_version}-linux-x86_64.tar.gz \
+RUN wget -q -O - https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${eskibana_version}-linux-aarch64.tar.gz \
 |  tar -zx \
 && mv elasticsearch-${eskibana_version} elasticsearch \
 && mkdir -p ${ES_TMPDIR} ${ES_DATADIR} \
-&& wget -q -O - https://artifacts.elastic.co/downloads/kibana/kibana-${eskibana_version}-linux-x86_64.tar.gz \
+&& wget -q -O - https://artifacts.elastic.co/downloads/kibana/kibana-${eskibana_version}-linux-aarch64.tar.gz \
 |  tar -zx \
-&& mv kibana-${eskibana_version}-linux-x86_64 kibana \
+&& mv kibana-${eskibana_version}-linux-aarch64 kibana \
 && rm -f kibana/node/bin/node \
 && ln -s $(which node) kibana/node/bin/node
 
