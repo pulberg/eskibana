@@ -1,11 +1,11 @@
-FROM arm64v8/node:20.15.1
+FROM arm64v8/node:20.19.2
 #FROM node:14.17.6
 #https://artifacts.elastic.co/downloads/kibana/kibana-8.10.2-linux-aarch64.tar.gz
 #https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.10.2-linux-aarch64.tar.gz
 
 LABEL maintainer "Phillip Ulberg <phillip.ulberg@gmail.com>"
 
-ARG eskibana_version=7.17.23
+ARG eskibana_version=7.17.29
 
 RUN useradd -ms /bin/bash elasticsearch
 

@@ -1,8 +1,8 @@
-FROM node:20.15.1
+FROM node:20.19.2
 
 LABEL maintainer "Phillip Ulberg <phillip.ulberg@gmail.com>"
 
-ARG eskibana_version=7.17.23
+ARG eskibana_version=7.17.29
 
 RUN useradd -ms /bin/bash elasticsearch
 
